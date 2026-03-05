@@ -5,7 +5,7 @@ import numpy as np
 # Seiten-Konfiguration (Titel und Icon)
 st.set_page_config(page_title="Zinseszins Rechner", page_icon="📈")
 
-st.title("📈 Dein ETF & KI Rechner")
+st.title("📈 Dein ETF Rechner")
 st.write("Berechne, wie dein Geld über die Jahre für dich arbeitet.")
 
 # 1. Eingabefelder (Die schöne Benutzeroberfläche)
@@ -44,7 +44,7 @@ gewinn = aktuelles_kapital - aktuell_eingezahlt
 
 # 3. Ergebnisse groß anzeigen
 st.divider()
-st.subheader("Dein Ergebnis")
+st.subheader("Ergebnis")
 metric1, metric2, metric3 = st.columns(3)
 metric1.metric("Eingezahlt", f"{aktuell_eingezahlt:,.0f} CHF")
 metric2.metric("Reiner Gewinn", f"{gewinn:,.0f} CHF")
@@ -64,4 +64,5 @@ ax.legend()
 ax.grid(True, linestyle='--', alpha=0.5)
 
 # Plot an Streamlit übergeben
+
 st.pyplot(fig)
